@@ -12,7 +12,7 @@ import * as serviceWorker from './serviceWorker';
 
 
 const rootReducer = combineReducers({searchRobots, requestRobots});
-const logger = createLogger();
+//const logger = createLogger();
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
 
