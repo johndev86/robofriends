@@ -5,10 +5,9 @@ export const setSearchField = (text) => ({
     payload: text
 });
 
-export const requestRobots = () => (dispatch) => {
+export const requestRobots = (apiCall) => (dispatch) => {
     dispatch({ type: REQUEST_ROBOTS_PENDING });
-    fetch("https://jsonplaceholder.typicode.com/users")
-    .then(response=>response.json())
+    return apiCall()
     .then(data=>{
         if (Object.keys(data).length === 0 || data.length === 0)
             throw new Error();
