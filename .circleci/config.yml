@@ -28,5 +28,5 @@ workflows:
       - build
       - hello
       - test:
-        requires:
-          - hello
+          requires:
+            - hello
