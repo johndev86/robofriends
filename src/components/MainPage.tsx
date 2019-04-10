@@ -1,13 +1,23 @@
-import React, {Component} from 'react';
-import CardList from '../components/CardList';
-import SearchBox from '../components/SearchBox';
-import Scroll from '../components/Scroll';
-import Header from '../components/Header';
-import ErrorBoundry from '../components/ErrorBoundry';
+import React, {Component, ChangeEvent} from 'react';
+import CardList from './CardList';
+import SearchBox from './SearchBox';
+import Scroll from './Scroll';
+import Header from './Header';
+import ErrorBoundry from './ErrorBoundry';
 import './MainPage.css';
+import {IRobot} from '../containers/App';
 
+interface IAppProps {
+    robots: Array<IRobot>;
+    searchField: string;
+    onSearchChange(event: ChangeEvent): void;
+    isPending: boolean;
+}
 
-class MainPage extends Component {
+interface IAppState {
+}
+
+class MainPage extends Component<IAppProps, IAppState> {
 
     filterRobots = () => {
         return this.props.robots.filter(robot => {

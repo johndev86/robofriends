@@ -1,13 +1,23 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state:IAppState) => {
     return {
         error: state.requestRobots.error
     }
 }
 
-class ErrorBoundry extends Component {
+interface IAppProps {
+    error: string;
+}
+
+interface IAppState {
+    requestRobots: {
+        error: string;
+    }
+}
+
+class ErrorBoundry extends Component<IAppProps, IAppState> {
 
     render() {
         const {error } = this.props;
