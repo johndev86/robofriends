@@ -21,6 +21,7 @@ ShallowWrapper {
       "children": <input
         aria-label="Search Robots"
         className="pa3 ba b--green bg-lightest-blue"
+        onChange={[Function]}
         placeholder="search robots"
         type="search"
       />,
@@ -34,7 +35,7 @@ ShallowWrapper {
       "props": Object {
         "aria-label": "Search Robots",
         "className": "pa3 ba b--green bg-lightest-blue",
-        "onChange": undefined,
+        "onChange": [Function],
         "placeholder": "search robots",
         "type": "search",
       },
@@ -53,6 +54,7 @@ ShallowWrapper {
         "children": <input
           aria-label="Search Robots"
           className="pa3 ba b--green bg-lightest-blue"
+          onChange={[Function]}
           placeholder="search robots"
           type="search"
         />,
@@ -66,7 +68,7 @@ ShallowWrapper {
         "props": Object {
           "aria-label": "Search Robots",
           "className": "pa3 ba b--green bg-lightest-blue",
-          "onChange": undefined,
+          "onChange": [Function],
           "placeholder": "search robots",
           "type": "search",
         },
