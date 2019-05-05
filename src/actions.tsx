@@ -8,7 +8,7 @@ export const setSearchField = (text: string) => ({
     payload: text
 });
 
-export const requestRobots = (apiCall: () => any) => (dispatch: Dispatch) => {
+export const requestRobots = (apiCall: () => Promise<string>) => (dispatch: Dispatch) => {
     dispatch({ type: REQUEST_ROBOTS_PENDING });
     return apiCall()
     .then((data: string)=>{

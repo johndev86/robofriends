@@ -26,7 +26,7 @@ interface IStoreProps {
 
 interface IDispatchProps {
     onSearchChange(event: ChangeEvent): void;
-    onRequestRobots(): Promise<void>;
+    onRequestRobots(): void;
 }
 
 interface IStateProps {
